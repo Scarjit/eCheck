@@ -14,7 +14,7 @@ def check_package(package_name: str) -> (int, str, str):
         print(f"Failed to lookup {package_name}\n")
         return False, package_name, "FAILED TO LOOKUP !"
 
-    if "com.android" in package_name or "com.google.android" in package_name or "org.lineageos" in package_name:
+    if "com.android" in package_name or "com.google.android" in package_name or "org.lineageos" in package_name or "lineageos.platform" == package_name or "android" == package_name:
         return 2, package_name, ""
     e_res = e_search_result_from_dict(result.json())
 
